@@ -1,0 +1,44 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull">
+	<!-- wp:pattern {"slug":"twentytwentyfour/hidden-posts-heading"} /-->
+	<!-- wp:pattern {"slug":"twentytwentyfour/posts-3-col"} /-->
+	<?php
+/*
+Template Name: Custom Portfolio Homepage
+*/
+
+get_header();
+?>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <ul class="nav-menu">
+    <li><a href="<?php echo site_url(); ?>">Home</a></li>
+    <li><a href="<?php echo site_url('/projects'); ?>">Projects</a>
+      <ul class="sub-menu">
+        <li><a href="<?php echo site_url('/projects/past'); ?>">Past Projects</a></li>
+        <li><a href="<?php echo site_url('/projects/present'); ?>">Present Projects</a></li>
+      </ul>
+    </li>
+    <li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>
+    <li><a href="<?php echo site_url('/login'); ?>">Login</a></li>
+  </ul>
+</nav>
+
+<!-- About Me Section -->
+<section class="about-me">
+  <h1>Welcome to My Portfolio</h1>
+  <p>Hi, I'm [Your Name], a web developer passionate about building dynamic and responsive web applications. I specialize in full-stack development and love bringing ideas to life through code.</p>
+</section>
+
+<?php
+get_footer();
+?>
+
+	
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"footer"} /-->

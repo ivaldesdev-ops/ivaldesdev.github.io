@@ -1,0 +1,278 @@
+/* ====== styles.css ====== */
+/*
+Theme Name: Portfolio Theme
+Author: Isaac Valdes
+Description: A custom WordPress theme for my portfolio.
+Version: 1.2
+*/
+
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  background: url('/wp-content/themes/Portfolio-main/images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+/* Ensure the body doesn't block it */
+body {
+  position: relative;
+  min-height: 100vh;
+  color: white; /* Ensure text is visible */
+}
+
+body, h1, h2, h3, h4, h5, h6, p, li, a, span, div {
+  color: #fff !important;
+}
+.content-box {
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: 10px;
+  color: white;
+}
+
+
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #ffcc00;
+}
+
+main,
+.about-me,
+.projects-page {
+  padding-top: 80px; /* Adjust this based on navbar height */
+}
+
+
+/* ===== Hamburger Button (Mobile) ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* ===== Main Content ===== */
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 60px;
+  flex: 1;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+
+/* ===== About Section (example) ===== */
+.about-me {
+  padding: 2rem 0;
+}
+
+.about-me h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-me p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: #333;
+}
+
+/* Ensure body and html take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex container setup */
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Push the footer to the bottom */
+main {
+  flex: 1;
+}
+
+/* Projects page related */
+.projects-page {
+  padding: 2rem;
+  /*background: #fff;*/
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project {
+  padding: 1.5rem;
+  /*background: #f9f9f9;*/
+  border-left: 5px solid #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project h2 {
+  margin-top: 0;
+}
+
+.project p {
+  margin: 0.5rem 0;
+}
+
+
+
+/* ===== Responsive Styles ===== */
+/* Desktop and default styles */
+
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .nav-menu li {
+    margin-bottom: 1rem;
+  }
+
+  main img {
+    float: none;
+    margin: 1rem 0;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-me {
+    padding: 2rem;
+  }
+
+  .about-me h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  .about-me p,
+  .about-me ul,
+  .about-me li {
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding-left: 10px;
+  }
+
+  body.admin-bar .navbar {
+    top: 32px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+    box-sizing: border-box;
+    background-attachment: scroll; /* fallback */
+    background-size: cover;
+  }
+	html, body {
+  height: 100%;
+}
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .nav-menu li {
+    margin-bottom: 1rem;
+  }
+
